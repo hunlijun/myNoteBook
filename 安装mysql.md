@@ -48,3 +48,18 @@ mysqld install
 net start mysql
 ```
 
+4、问题解答
+
+* 如果连接mysql提示The server time zone value，则需要在连接字符串后面添加：?serverTimezone=UTC
+
+  ```sql
+  jdbc:mysql://127.0.0.1:3306/mysql?serverTimezone=UTC
+  ```
+
+* 如果提示密码不对，则需要修改密码，通过cmd登录mysql的root账号，然后修改密码：
+
+  ```sql
+  alter user 'root'@'localhost'IDENTIFIED BY 'MyNewPass';
+  ```
+
+  
