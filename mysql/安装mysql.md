@@ -62,4 +62,10 @@ net start mysql
   alter user 'root'@'localhost'IDENTIFIED BY 'MyNewPass';
   ```
 
+* 创建不了函数，则需要开启：
+
+  ```sql
+  SET GLOBAL log_bin_trust_function_creators = 1;
+  ```
+
   
